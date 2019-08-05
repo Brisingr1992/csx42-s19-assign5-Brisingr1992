@@ -2,7 +2,7 @@ package troubleShootSearch.util;
 
 public class MyLogger {
     // FIXME: Add more enum values as needed for the assignment
-    public static enum DebugLevel { ERRORS, SEARCH, RESULTS, CONSTRUCTOR, FILE_PROCESSOR };
+    public static enum DebugLevel { ERRORS, SEARCH, RESULTS, CONSTRUCTOR, IN_RUN };
 
     private static DebugLevel debugLevel;
 
@@ -14,7 +14,7 @@ public class MyLogger {
             case 1: debugLevel = DebugLevel.SEARCH; break;
             case 2: debugLevel = DebugLevel.RESULTS; break;
             case 3: debugLevel = DebugLevel.CONSTRUCTOR; break;
-            case 4: debugLevel = DebugLevel.FILE_PROCESSOR; break;
+            case 4: debugLevel = DebugLevel.IN_RUN; break;
         }
     }
 
