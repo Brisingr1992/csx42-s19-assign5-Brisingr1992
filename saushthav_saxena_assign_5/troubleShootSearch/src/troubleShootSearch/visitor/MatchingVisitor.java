@@ -17,9 +17,17 @@ public class MatchingVisitor implements VisitorI {
     private StemmingMatch stemming;
 
     public MatchingVisitor(FileProcessor fp, Results results) {
-        this.exact = new ExactMatch(results);
-        this.semantic = new SemanticMatch(fp, results);
-        this.stemming = new StemmingMatch(results);
+        try {
+            this.exact = new ExactMatch(results);
+            this.semantic = new SemanticMatch(fp, results);
+            this.stemming = new StemmingMatch(results);
+            this.semantic.init();
+        } catch (Exception e) {
+            System.err.println("[Exception Caught]: " + e.getMessage());
+            e.printStackTrace();
+            System.exit(1);
+        }
+
     }
 
     @Override

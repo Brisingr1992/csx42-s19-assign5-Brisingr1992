@@ -5,6 +5,7 @@ import troubleShootSearch.util.MyLogger;
 import troubleShootSearch.visitor.VisitorI;
 import java.util.ArrayList;
 import java.util.List;
+import java.lang.InstantiationError;
 
 /**
  * The main visitable interface for the assignment5
@@ -16,20 +17,34 @@ public class Product implements VisitableI {
     private int id;
 
     public Product(FileProcessor fp, int id) {
+        try {
+            if (fp == null) throw new InstantiationError("Failed to instantialte Product strings...");
+        } catch (Exception e) {
+            System.err.println("[Exception Caught]: " + e.getMessage());
+            e.printStackTrace();
+            System.exit(1);
+        }
+    
         this.fp = fp;
         this.troubleshoot = new ArrayList<String>();
         this.id = id;
     }
 
     public void init() {
-        String sentence = "";
-        while (sentence != null) {
-            MyLogger.writeMessage("Initializing product...", MyLogger.DebugLevel.IN_RUN);
-            sentence = fp.readLine();
+        try {
+            String sentence = "";
+            while (sentence != null) {
+                MyLogger.writeMessage("Initializing product(" + id + ")...", MyLogger.DebugLevel.IN_RUN);
+                sentence = this.fp.readLine();
 
-            if (sentence != null) {
-                troubleshoot.add(sentence);
+                if (sentence != null) {
+                    troubleshoot.add(sentence);
+                }
             }
+        } catch (Exception e) {
+            System.err.println("[Exception Caught]: " + e.getMessage());
+            e.printStackTrace();
+            System.exit(1);
         }
     }
 
