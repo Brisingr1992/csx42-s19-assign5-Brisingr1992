@@ -13,10 +13,12 @@ import java.util.List;
 public class Product implements VisitableI {
     private List<String> troubleshoot;
     private FileProcessor fp;
+    private int id;
 
-    public Product(FileProcessor fp) {
+    public Product(FileProcessor fp, int id) {
         this.fp = fp;
         this.troubleshoot = new ArrayList<String>();
+        this.id = id;
     }
 
     public void init() {
@@ -33,6 +35,10 @@ public class Product implements VisitableI {
 
     public List<String> getList() {
         return this.troubleshoot;
+    }
+
+    public int getId() {
+        return this.id;
     }
 
     @Override

@@ -10,4 +10,5 @@ import java.util.List;
 public interface VisitableI {
     public void apply(VisitorI visit, String keyword);
     public List<String> getList();
+    public int getId();
 }
