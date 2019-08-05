@@ -12,21 +12,20 @@ import troubleShootSearch.util.FileProcessor;
  * @author Saushthav Saxena
  */
 public class MatchingVisitor implements VisitorI {
-    private Results results;
     private ExactMatch exact;
     private SemanticMatch semantic;
     private StemmingMatch stemming;
 
     public MatchingVisitor(FileProcessor fp, Results results) {
-        this.results = results;
-        this.exact = new ExactMatch();
-        this.semantic = new SemanticMatch();
-        // this.stemming = new StemmingMatch(fp);
-        this.stemming = new StemmingMatch();
+        this.exact = new ExactMatch(results);
+        this.semantic = new SemanticMatch(results);
+        this.stemming = new StemmingMatch(fp, results);
     }
 
     @Override
     public void visit(VisitableI product, String keyword) {
-        // TODO: Implement all the searches
+        exact.search(product.getTroubleshoot(), keyword);
+        semantic.search(product.getTroubleshoot(), keyword);
+        stemming.search(product.getTroubleshoot(), keyword);
     }
 }
