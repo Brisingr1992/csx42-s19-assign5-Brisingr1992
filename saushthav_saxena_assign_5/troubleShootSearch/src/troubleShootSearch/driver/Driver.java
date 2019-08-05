@@ -43,7 +43,7 @@ public class Driver {
         MyLogger.writeMessage("Initializing products...", MyLogger.DebugLevel.IN_RUN);
         Product[] products = new Product[4];
         for (int i = 0; i < products.length; i++) {
-            products[i] = new Product(new FileProcessor(args[i], i));
+            products[i] = new Product(new FileProcessor(args[i], i), i + 1);
             products[i].init();
         }
 
