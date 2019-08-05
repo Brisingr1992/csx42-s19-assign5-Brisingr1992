@@ -18,14 +18,14 @@ public class MatchingVisitor implements VisitorI {
 
     public MatchingVisitor(FileProcessor fp, Results results) {
         this.exact = new ExactMatch(results);
-        this.semantic = new SemanticMatch(results);
-        this.stemming = new StemmingMatch(fp, results);
+        this.semantic = new SemanticMatch(fp, results);
+        this.stemming = new StemmingMatch(results);
     }
 
     @Override
     public void visit(VisitableI product, String keyword) {
-        exact.search(product.getList(), keyword);
-        semantic.search(product.getList(), keyword);
-        stemming.search(product.getList(), keyword);
+        exact.search(product.getList(), product.getId(), keyword);
+        semantic.search(product.getList(), product.getId(), keyword);
+        stemming.search(product.getList(), product.getId(), keyword);
     }
 }
