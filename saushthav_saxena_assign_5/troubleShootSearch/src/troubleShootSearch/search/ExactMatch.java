@@ -11,7 +11,14 @@ public class ExactMatch implements SearchI {
         this.results = results;
     }
 
-    public void search(List<String> lt, String keyword) {
+    public void search(List<String> lt, int id, String keyword) {
+        for (String s: lt) {
+            int index = s.indexOf(keyword);
 
+            if (index >= 0) {
+                String msg = "[Exact Match] Product(" + id + ") with keyword (" + keyword + "): " + s;
+                results.addResult(msg);
+            }
+        }
     }
 }
