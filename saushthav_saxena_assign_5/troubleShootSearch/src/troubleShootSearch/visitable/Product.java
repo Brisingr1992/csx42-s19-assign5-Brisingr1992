@@ -1,20 +1,22 @@
 package troubleShootSearch.visitable;
 
 import troubleShootSearch.util.FileProcessor;
-import troubleShootSearch.util.MyLogger;;
+import troubleShootSearch.util.MyLogger;
 import troubleShootSearch.visitor.VisitorI;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * The main visitable interface for the assignment5
  * @author Saushthav Saxena
  */
 public class Product implements VisitableI {
-    private ArrayList<String> troubleshoot;
+    private List<String> troubleshoot;
     private FileProcessor fp;
 
     public Product(FileProcessor fp) {
         this.fp = fp;
+        this.troubleshoot = new ArrayList<String>();
     }
 
     public void init() {
@@ -27,6 +29,10 @@ public class Product implements VisitableI {
                 troubleshoot.add(sentence);
             }
         }
+    }
+
+    public List<String> getList() {
+        return this.troubleshoot;
     }
 
     @Override

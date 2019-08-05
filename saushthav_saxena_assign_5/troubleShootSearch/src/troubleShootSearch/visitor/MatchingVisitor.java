@@ -24,8 +24,8 @@ public class MatchingVisitor implements VisitorI {
 
     @Override
     public void visit(VisitableI product, String keyword) {
-        exact.search(product.getTroubleshoot(), keyword);
-        semantic.search(product.getTroubleshoot(), keyword);
-        stemming.search(product.getTroubleshoot(), keyword);
+        exact.search(product.getList(), keyword);
+        semantic.search(product.getList(), keyword);
+        stemming.search(product.getList(), keyword);
     }
 }
