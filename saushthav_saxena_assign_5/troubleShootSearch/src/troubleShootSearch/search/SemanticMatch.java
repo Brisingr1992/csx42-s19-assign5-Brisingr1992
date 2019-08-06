@@ -40,19 +40,19 @@ public class SemanticMatch implements SearchI {
         }
     }
 
-    public void search(List<String> lt, int id, String keyword) {
+    public boolean search(List<String> lt, int id, String keyword) {
         try {
             for (String s: lt) {
                 String[] str = keyword.split(" ");
     
                 for (String temp: str) {
-                    int index = s.indexOf(temp);
-                    int index1 =  hm.containsKey(temp) ? s.indexOf(hm.get(temp)) : -1;
+                    // int index = s.indexOf(temp);
+                    int index =  hm.containsKey(temp) ? s.indexOf(hm.get(temp)) : -1;
     
-                    if (index >= 0 || index1 >= 0) {
+                    if (index >= 0) {
                         String msg = "[Semantic Match] Product(" + id + ") with keyword (" + keyword + "): " + s;
                         results.addResult(msg);
-                        break;
+                        return true;
                     }
                 }
             }
@@ -61,5 +61,7 @@ public class SemanticMatch implements SearchI {
             e.printStackTrace();
             System.exit(1);
         }
+
+        return false;
     }
 }

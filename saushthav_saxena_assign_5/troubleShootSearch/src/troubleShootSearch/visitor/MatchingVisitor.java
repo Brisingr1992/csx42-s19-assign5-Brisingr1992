@@ -12,12 +12,14 @@ import troubleShootSearch.util.FileProcessor;
  * @author Saushthav Saxena
  */
 public class MatchingVisitor implements VisitorI {
+    private Results results;
     private ExactMatch exact;
     private SemanticMatch semantic;
     private StemmingMatch stemming;
 
     public MatchingVisitor(FileProcessor fp, Results results) {
         try {
+            this.results = results;
             this.exact = new ExactMatch(results);
             this.semantic = new SemanticMatch(fp, results);
             this.stemming = new StemmingMatch(results);
@@ -32,8 +34,19 @@ public class MatchingVisitor implements VisitorI {
 
     @Override
     public void visit(VisitableI product, String keyword) {
-        exact.search(product.getList(), product.getId(), keyword);
-        semantic.search(product.getList(), product.getId(), keyword);
-        stemming.search(product.getList(), product.getId(), keyword);
+        boolean check = false;
+        check = exact.search(product.getList(), product.getId(), keyword);
+        if (!check) {
+            check = stemming.search(product.getList(), product.getId(), keyword);
+        }
+
+        if (!check) {
+            check = semantic.search(product.getList(), product.getId(), keyword);
+        }
+
+        if (!check) {
+            String msg = "Product(" + product.getId() + ") cant find suggestions for keyword (" + keyword + ").";
+            results.addResult(msg);
+        }
     }
 }

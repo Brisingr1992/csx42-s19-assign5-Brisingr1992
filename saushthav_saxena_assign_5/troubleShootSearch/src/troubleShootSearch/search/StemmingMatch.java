@@ -11,7 +11,7 @@ public class StemmingMatch implements SearchI {
         this.results = results;
     }
 
-    public void search(List<String> lt, int id, String keyword) {
+    public boolean search(List<String> lt, int id, String keyword) {
         for (String s: lt) {
             
             String[] str = keyword.split(" ");
@@ -21,8 +21,11 @@ public class StemmingMatch implements SearchI {
                 if (index >= 0) {
                     String msg = "[Stemming Match] Product(" + id + ") with keyword (" + keyword + "): " + s;
                     results.addResult(msg);
+                    return true;
                 }
             }
         }
+
+        return false;
     }
 }
