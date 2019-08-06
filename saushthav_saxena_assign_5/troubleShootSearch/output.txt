@@ -1,0 +1,36 @@
+[Exact Match] Product(1) with keyword (problem detecting): If Debian has a problem detecting the drive, it could be that the portable drive is not receiving enough power.
+[Exact Match] Product(2) with keyword (problem detecting): If Debian has a problem detecting the drive, it could be that the portable drive is not receiving enough power.
+[Exact Match] Product(3) with keyword (problem detecting): If Debian has a problem detecting the drive, it could be that the portable drive is not receiving enough power.
+[Exact Match] Product(4) with keyword (problem detecting): If Debian has a problem detecting the drive, it could be that the portable drive is not receiving enough power.
+[Stemming Match] Product(1) with keyword (detect error): If Debian has a problem detecting the drive, it could be that the portable drive is not receiving enough power.
+[Stemming Match] Product(2) with keyword (detect error): If Debian has a problem detecting the drive, it could be that the portable drive is not receiving enough power.
+[Stemming Match] Product(3) with keyword (detect error): If Debian has a problem detecting the drive, it could be that the portable drive is not receiving enough power.
+[Stemming Match] Product(4) with keyword (detect error): If Debian has a problem detecting the drive, it could be that the portable drive is not receiving enough power.
+[Semantic Match] Product(1) with keyword (comptabile CPU): All products from AMD have a compatable processor as far as dSeaGate is concerned.
+[Semantic Match] Product(2) with keyword (comptabile CPU): All products from AMD have a compatable processor as far as dSeaGate is concerned.
+[Semantic Match] Product(3) with keyword (comptabile CPU): All products from AMD have a compatable processor as far as dSeaGate is concerned.
+[Semantic Match] Product(4) with keyword (comptabile CPU): All products from AMD have a compatable processor as far as dSeaGate is concerned.
+[Exact Match] Product(1) with keyword (no bootable device found): Your hard drive is broken. This is a common reason for a “no bootable device found” error.
+[Exact Match] Product(2) with keyword (no bootable device found): Your hard drive is broken. This is a common reason for a “no bootable device found” error.
+[Exact Match] Product(3) with keyword (no bootable device found): Your hard drive is broken. This is a common reason for a “no bootable device found” error.
+[Exact Match] Product(4) with keyword (no bootable device found): Your hard drive is broken. This is a common reason for a “no bootable device found” error.
+[Stemming Match] Product(1) with keyword (severely bad): If this important metadata on your hard drive becomes severely corrupted, your hard drive, or at least the partition containing your operating system, may appear to be blank.
+[Stemming Match] Product(2) with keyword (severely bad): If this important metadata on your hard drive becomes severely corrupted, your hard drive, or at least the partition containing your operating system, may appear to be blank.
+[Stemming Match] Product(3) with keyword (severely bad): If this important metadata on your hard drive becomes severely corrupted, your hard drive, or at least the partition containing your operating system, may appear to be blank.
+[Stemming Match] Product(4) with keyword (severely bad): If this important metadata on your hard drive becomes severely corrupted, your hard drive, or at least the partition containing your operating system, may appear to be blank.
+[Semantic Match] Product(1) with keyword (core is): The SATA/IDE cable connecting your hard drive to the motherboard is loose or doesn’t work.
+[Semantic Match] Product(2) with keyword (core is): The SATA/IDE cable connecting your hard drive to the motherboard is loose or doesn’t work.
+[Semantic Match] Product(3) with keyword (core is): The SATA/IDE cable connecting your hard drive to the motherboard is loose or doesn’t work.
+[Semantic Match] Product(4) with keyword (core is): The SATA/IDE cable connecting your hard drive to the motherboard is loose or doesn’t work.
+Product(1) cant find suggestions for keyword (abracadabra).
+Product(2) cant find suggestions for keyword (abracadabra).
+Product(3) cant find suggestions for keyword (abracadabra).
+Product(4) cant find suggestions for keyword (abracadabra).
+Product(1) cant find suggestions for keyword (testin bad).
+Product(2) cant find suggestions for keyword (testin bad).
+Product(3) cant find suggestions for keyword (testin bad).
+Product(4) cant find suggestions for keyword (testin bad).
+Product(1) cant find suggestions for keyword (rofl).
+Product(2) cant find suggestions for keyword (rofl).
+Product(3) cant find suggestions for keyword (rofl).
+Product(4) cant find suggestions for keyword (rofl).

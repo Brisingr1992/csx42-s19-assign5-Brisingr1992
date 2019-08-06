@@ -1,0 +1,5 @@
+If Debian has a problem detecting the drive, it could be that the portable drive is not receiving enough power.
+All products from AMD have a compatable processor as far as dSeaGate is concerned.
+Your hard drive is broken. This is a common reason for a “no bootable device found” error.
+If this important metadata on your hard drive becomes severely corrupted, your hard drive, or at least the partition containing your operating system, may appear to be blank.
+The SATA/IDE cable connecting your hard drive to the motherboard is loose or doesn’t work.

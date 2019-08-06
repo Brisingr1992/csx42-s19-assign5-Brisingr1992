@@ -1,5 +1,4 @@
 *.class
-*.txt
 BUILD
 /.DS_Store
 src/.DS_Store
