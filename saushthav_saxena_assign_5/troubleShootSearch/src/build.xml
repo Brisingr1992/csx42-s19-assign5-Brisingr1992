@@ -57,7 +57,7 @@
   <target name="tar">
     <mkdir dir="${BUILD}/dist"/>
     <tar destfile="${BUILD}/dist/saushthav_saxena_assign_5.tar" basedir="../" 
-        excludes="**/*.txt, **/BUILD/** "/>
+        excludes="**/BUILD/** "/>
     <gzip destfile="${BUILD}/dist/saushthav_saxena_assign_5.tar.gz" src="${BUILD}/dist/saushthav_saxena_assign_5.tar" />
   </target>
 </project>
